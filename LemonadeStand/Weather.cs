@@ -25,11 +25,21 @@ namespace LemonadeStand
 
             rand = new Random(0);
             dayTemperature = rand.Next(40) + 50;
-            
-            
-            
-            
-          }
+
+            if (rand.Next(100) < 50)
+
+            {
+                roll = rand.Next(3);
+                if (roll == 1) dayForecastConditions = "Clear";
+                if (roll == 2) dayForecastConditions = "Cloudy";
+                if (roll == 3) dayForecastConditions = "Rainy";
+            }
+            else dayForecastConditions = dayConditions;
+
+            if (rand.Next(100) < 50) dayForecastTemperature = dayForecastTemperature - (rand.Next(8));
+            else dayForecastTemperature = dayForecastTemperature + (rand.Next(8));
+                
+        }
 
     }
 }

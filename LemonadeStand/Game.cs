@@ -12,17 +12,19 @@ namespace LemonadeStand
         List<Day> Days;
         int currentDay;
 
-    }
-    public RunGame();
-    {
 
+        internal Game();
     }
-         public void DisplayWelcome();
+        
+                   
+        internal DisplayWelcome();
         {
         Console.WriteLine("Welcome to LemonadeStand!/n");
-        Console.WriteLine("You start off with $25.00 and an inventory/n");
+        Console.WriteLine("You start off with $20.00 and an inventory/n");
         Console.WriteLine("You have a week to make or break your business!/n");
         Console.WriteLine("Good luck!!");
 
         }
+    
+        DisplayWelcome();
 }
