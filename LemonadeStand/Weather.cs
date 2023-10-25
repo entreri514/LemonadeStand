@@ -9,8 +9,8 @@ namespace LemonadeStand
     public class Weather
         
     {
-        public string dayConditions;
-        public int dayTemperature;
+        public string dayForecastConditions,dayConditions;
+        public int dayForecastTemperature,dayTemperature;
         public int roll;
         public Random rand;
         
@@ -25,6 +25,9 @@ namespace LemonadeStand
 
             rand = new Random(0);
             dayTemperature = rand.Next(40) + 50;
+            
+            
+            
             
           }
 
