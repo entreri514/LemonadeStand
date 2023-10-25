@@ -25,10 +25,8 @@ namespace LemonadeStand
 
             rand = new Random(0);
             dayTemperature = rand.Next(40) + 50;
-
             
-            
-        }
+          }
 
     }
 }
