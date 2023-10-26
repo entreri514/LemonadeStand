@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LemonadeStand;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,11 @@ namespace LemonadeStand
         int currentDay;
 
 
-        internal Game();
+        public Game();
     }
         
                    
-        internal DisplayWelcome();
+        public DisplayWelcome();
         {
         Console.WriteLine("Welcome to LemonadeStand!/n");
         Console.WriteLine("You start off with $20.00 and an inventory/n");
@@ -25,6 +26,8 @@ namespace LemonadeStand
         Console.WriteLine("Good luck!!");
 
         }
-    
+
+        public static RunGame();
         DisplayWelcome();
+        Player.PlayerPurchase();
 }

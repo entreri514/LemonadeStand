@@ -23,5 +23,12 @@ namespace LemonadeStand
 
         // member methods (CAN DO)
 
+        public PlayerPurchase();
+            public static string YN;
+
+            Console.WriteLine("Would you like to make any purchases? <Y/N> ");
+            YN=Console.ReadLine;
+            if (YN<>"y") YN="n";
+        return;
     }
 }

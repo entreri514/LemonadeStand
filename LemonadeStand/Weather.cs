@@ -24,7 +24,7 @@ namespace LemonadeStand
             if (roll == 3) dayConditions = "Rainy";
 
             rand = new Random(0);
-            dayTemperature = rand.Next(40) + 50;
+            dayTemperature = rand.Next(50,90);
 
             if (rand.Next(100) < 50)
 
@@ -37,7 +37,7 @@ namespace LemonadeStand
             else dayForecastConditions = dayConditions;
 
             if (rand.Next(100) < 50) dayForecastTemperature = dayForecastTemperature - (rand.Next(8));
-            else dayForecastTemperature = dayForecastTemperature + (rand.Next(8));
+            else dayForecastTemperature = dayForecastTemperature + (rand.Next(9));
                 
         }
 
