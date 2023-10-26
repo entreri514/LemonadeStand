@@ -23,19 +23,9 @@
 
         }
 
-        public string PlayerPurchase(string YN)
-        {
-        Console.WriteLine("Would you like to buy any items today? <y/n> ");
-        YN = Console.ReadLine();
-            if (YN != "y") YN = "n";
-            if (YN == "n") return (YN);
+        
 
-
-
-
-
-            return (YN);
-        }
+                    }
 
         public void RunGame()
         { 
