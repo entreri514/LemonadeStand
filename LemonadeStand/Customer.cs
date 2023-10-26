@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     internal class Customer
     {
-        public Customer();
+        public Customer(List<1>.customers);
 
     }
 }
