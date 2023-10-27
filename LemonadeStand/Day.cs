@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LemonadeStand
-{
+{ 
     internal class Day
     {
         public List<Customer> customers;
@@ -23,12 +23,12 @@ namespace LemonadeStand
 
         public void CreateCustomers(int numOfCustomers = 25);
         {   
-            for (int i = 0; i<numOfCustomers; i++)
+            for (int i = 0; i < numOfCustomers; i++)
             {   
             customers.Add(new Customer[]);
             }
         }       
-        public double CustomerWalkingby(double lemonadePrice);
+        public int CustomerWalkingby(double lemonadePrice);
         {
             int customersBought = 0;
 
