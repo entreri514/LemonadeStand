@@ -17,18 +17,22 @@ namespace LemonadeStand
         {
             customers = new List<Customer>();
         }
+
+        Weather weather = new Weather("", 0);
         public void StartDay()
+        {
+
+        }           
 
 
-
-        public void CreateCustomers(int numOfCustomers = 25);
+        public void CreateCustomers(int numOfCustomers = 25)
         {   
             for (int i = 0; i < numOfCustomers; i++)
             {   
-            customers.Add(new Customer[]);
+            customers.Add(new Customer());
             }
         }       
-        public int CustomerWalkingby(double lemonadePrice);
+        public void CustomerWalkingby(double lemonadePrice)
         {
             int customersBought = 0;
 
@@ -51,4 +55,4 @@ namespace LemonadeStand
             }
         }
     }
-}
+ }

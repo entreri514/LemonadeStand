@@ -21,7 +21,7 @@ namespace LemonadeStand
             numberOfLemons = 2;
             numberOfSugarCubes = 4;
             numberOfIceCubes = 10;
-            price = 1;
+            price = .25;
         }
 
         //Member Methods (CAN DO)
@@ -37,7 +37,7 @@ namespace LemonadeStand
             if (YN != "y") return;
             Console.WriteLine("Enter number of lemons: ");
             string input = Console.ReadLine();
-            numberOfLemons=int.Parse(input);
+            numberOfLemons = int.Parse(input);
             Console.WriteLine("Enter number of sugar cubes: ");
             input = Console.ReadLine();
             numberOfSugarCubes = int.Parse(input);
@@ -46,7 +46,12 @@ namespace LemonadeStand
             numberOfIceCubes = int.Parse(input);
             return;
         }
+        public void ChangePrice()
+        {
+            Console.WriteLine("Enter today's price: ");
+            string input=Console.ReadLine();
+            price = double.Parse(input);
 
-        
+        }
     }   
 }
