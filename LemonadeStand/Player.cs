@@ -39,10 +39,10 @@ namespace LemonadeStand
             int entry = int.Parse(input);
             Store store = new Store();
 
-            if (entry == 1) store.SellLemons();
-            if (entry == 2) store.SellSugarCubes();
-            if (entry == 3) store.SellIceCubes();
-            if (entry == 4) store.SellCups();
+       //     if (entry == 1) store.SellLemons(0);
+       //     if (entry == 2) store.SellSugarCubes(0);
+       //     if (entry == 3) store.SellIceCubes(0);
+       //     if (entry == 4) store.SellCups(0);
 
                 return (YN);
         }

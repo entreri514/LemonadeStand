@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.RunGame();
+            Weather weather = new Weather("", 0);           
         }
+        
     }
 }

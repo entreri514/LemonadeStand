@@ -8,7 +8,19 @@ namespace LemonadeStand
 {
     internal class Day
     {
-        Weather weather;
-        List <Customer> customers;
+        public List<Customer>();
+    }   
+
+
+        public Day[]
+        {
+            customers=new List<Customer>();
+    public void StartDay()
+
+    public void CreateCustomers(int numOfCustomers = 25);
+
+
+
+
     }
 }

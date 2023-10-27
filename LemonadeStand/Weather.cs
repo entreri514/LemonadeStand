@@ -19,26 +19,27 @@ namespace LemonadeStand
             rand=new Random(0);
             roll=rand.Next(3);
 
-            if (roll == 1) dayConditions = "Clear";
-            if (roll == 2) dayConditions = "Cloudy";
-            if (roll == 3) dayConditions = "Rainy";
+            if (roll == 1) dayForecastConditions = "Clear";
+            if (roll == 2) dayForecastConditions = "Cloudy";
+            if (roll == 3) dayForecastConditions = "Rainy";
 
             rand = new Random(0);
-            dayTemperature = rand.Next(50,90);
+            dayForecastTemperature = rand.Next(50,90);
 
             if (rand.Next(100) < 50)
 
             {
                 roll = rand.Next(3);
-                if (roll == 1) dayForecastConditions = "Clear";
-                if (roll == 2) dayForecastConditions = "Cloudy";
-                if (roll == 3) dayForecastConditions = "Rainy";
+                if (roll == 1) dayConditions = "Clear";
+                if (roll == 2) dayConditions = "Cloudy";
+                if (roll == 3) dayConditions = "Rainy";
             }
-            else dayForecastConditions = dayConditions;
+            else dayConditions = dayForecastConditions;
 
-            if (rand.Next(100) < 50) dayForecastTemperature = dayForecastTemperature - (rand.Next(8));
-            else dayForecastTemperature = dayForecastTemperature + (rand.Next(9));
-                
+            if (rand.Next(100) < 50) dayTemperature = dayForecastTemperature - (rand.Next(9));
+            else dayTemperature = dayForecastTemperature + (rand.Next(9));
+            Console.WriteLine(dayConditions, dayForecastConditions);
+            Console.WriteLine(dayTemperature);
         }
 
     }
