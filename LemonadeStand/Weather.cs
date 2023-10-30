@@ -13,9 +13,13 @@ namespace LemonadeStand
         public int dayForecastTemperature,dayTemperature;
         public int roll;
         public Random rand;
-        
-            public Weather(string dayConditions,int dayTemperature)
-        {   
+
+        public Weather()
+        {
+
+        }
+            public string GetWeatherCondition(string dayConditions)
+        { 
             rand=new Random(0);
             roll=rand.Next(3);
 
@@ -23,8 +27,7 @@ namespace LemonadeStand
             if (roll == 2) dayForecastConditions = "Cloudy";
             if (roll == 3) dayForecastConditions = "Rainy";
 
-            rand = new Random(0);
-            dayForecastTemperature = rand.Next(50,90);
+            
 
             if (rand.Next(100) < 50)
 
@@ -34,13 +37,25 @@ namespace LemonadeStand
                 if (roll == 2) dayConditions = "Cloudy";
                 if (roll == 3) dayConditions = "Rainy";
             }
-            else dayConditions = dayForecastConditions;
+            else { dayConditions = dayForecastConditions; }
+
+            
+            
+            return (dayConditions);
+        }
+        public int GetWeatherTemperature(int dayTemperature)
+        {
+            rand = new Random(0);
+            dayForecastTemperature = rand.Next(50, 90);
 
             if (rand.Next(100) < 50) dayTemperature = dayForecastTemperature - (rand.Next(9));
-            else dayTemperature = dayForecastTemperature + (rand.Next(9));
-            Console.WriteLine(dayConditions, dayForecastConditions);
-            Console.WriteLine(dayTemperature);
+            else { dayTemperature = dayForecastTemperature + (rand.Next(9)); }
+            return (dayTemperature);
         }
-
+        public void DisplayForecast()
+        {
+            Console.WriteLine("Forecast for today: /n");
+            Console.WriteLine(dayForecastTemperature + " ," + dayForecastConditions);
+        }
     }
 }

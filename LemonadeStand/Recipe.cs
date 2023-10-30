@@ -31,19 +31,22 @@ namespace LemonadeStand
         }
         public void ChangeRecipe()
         {
-            string YN;
+            string YN="n";
             Console.WriteLine("Would you like to change the recipe for today? <y or n>");
-            YN = Console.ReadLine();
-            if (YN != "y") return;
-            Console.WriteLine("Enter number of lemons: ");
             string input = Console.ReadLine();
-            numberOfLemons = int.Parse(input);
-            Console.WriteLine("Enter number of sugar cubes: ");
-            input = Console.ReadLine();
-            numberOfSugarCubes = int.Parse(input);
-            Console.WriteLine("Enter number of ice cubes: ");
-            input = Console.ReadLine();
-            numberOfIceCubes = int.Parse(input);
+            if (input != "y") YN="n";
+            if (YN == "y")
+            {
+                Console.WriteLine("Enter number of lemons: ");
+                input = Console.ReadLine();
+                numberOfLemons = int.Parse(input);
+                Console.WriteLine("Enter number of sugar cubes: ");
+                input = Console.ReadLine();
+                numberOfSugarCubes = int.Parse(input);
+                Console.WriteLine("Enter number of ice cubes: ");
+                input = Console.ReadLine();
+                numberOfIceCubes = int.Parse(input);
+            }
             return;
         }
         public void ChangePrice()

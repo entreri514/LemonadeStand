@@ -10,7 +10,7 @@ namespace LemonadeStand
     internal class Customer
     {
         Day day=new Day();
-        public Customer(Day.Customer.customers);
+ //      public Customer(Day.List.customers);
         double willingToPay;
 
         public Customer()

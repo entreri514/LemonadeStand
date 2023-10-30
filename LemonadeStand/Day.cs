@@ -10,7 +10,7 @@ namespace LemonadeStand
     internal class Day
     {
         public List<Customer> customers;
-
+        int customersBought;
 
 
         public Day()
@@ -18,7 +18,7 @@ namespace LemonadeStand
             customers = new List<Customer>();
         }
 
-        Weather weather = new Weather("", 0);
+        Weather weather = new Weather();
         public void StartDay()
         {
 
@@ -53,6 +53,7 @@ namespace LemonadeStand
                 }
                 
             }
+            
         }
     }
  }

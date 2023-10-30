@@ -2,11 +2,17 @@
 {
     public class Game
     {
-        Player player;
+        string dayConditions;
+        int dayTemperature;
+        Player player=new Player();
         List<Day> Days;
         int currentDay;
-        Recipe recipe;
-        Inventory inventory;
+        Recipe recipe=new Recipe();
+        Inventory inventory=new Inventory();
+        Weather weather=new Weather();
+        Day day = new Day();
+        double paymentCollected;
+        
         public Game()
         {
             
@@ -28,10 +34,20 @@
             DisplayWelcome();
             while (currentDay < 8)
             {
+                weather.GetWeatherCondition(dayConditions);
+                weather.GetWeatherTemperature(dayTemperature);
+                weather.DisplayForecast();
                 recipe.DisplayRecipe();
                 recipe.ChangeRecipe();
-                player.PlayerPurchase();
+                recipe.ChangePrice();
                 inventory.DisplayInventory();
+                player.PlayerPurchase();
+                UserInterface.GetNumberOfPitchers();
+                day.CreateCustomers();
+                day.CustomerWalkingby(recipe.price);
+                paymentCollected = day.customersBought * recipe.price;
+
+                currentDay++;
             }
         }
         

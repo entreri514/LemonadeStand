@@ -23,29 +23,34 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
-        public string PlayerPurchase()
+        public void PlayerPurchase()
         {
-            string YN;
+
+            string YN="y";
+            while (YN=="y")
+            { 
             Console.WriteLine("Would you like to buy any items today? <y/n> ");
-            YN = Console.ReadLine();
-            if (YN != "y") YN = "n";
-            if (YN == "n") return (YN);
-
-            Console.WriteLine("What would you like to purchase /n");
-            Console.WriteLine("1. Lemons/n");
-            Console.WriteLine("2. Sugar/n");
-            Console.WriteLine("3. Ice Cubes/n");
-            Console.WriteLine("4. Cups/n");
             string input = Console.ReadLine();
-            int entry = int.Parse(input);
-            Store store = new Store();
-            Player player = new Player();
-            if (entry == 1) store.SellLemons(player);
-            if (entry == 2) store.SellSugarCubes(player);
-            if (entry == 3) store.SellIceCubes(player);
-            if (entry == 4) store.SellCups(player);
-
-                return (YN);
+            if (input != "y") input = "n";
+            if (input == "n") YN="n";
+            if (YN != "n")
+                {
+                Console.WriteLine("What would you like to purchase ");
+                Console.WriteLine("1. Lemons ");
+                Console.WriteLine("2. Sugar ");
+                Console.WriteLine("3. Ice Cubes ");
+                Console.WriteLine("4. Cups ");
+                string input2 = Console.ReadLine();
+                int entry = int.Parse(input2);
+                Store store = new Store();
+                Player player = new Player();
+                if (entry == 1) store.SellLemons(player);
+                if (entry == 2) store.SellSugarCubes(player);
+                if (entry == 3) store.SellIceCubes(player);
+                if (entry == 4) store.SellCups(player);
+                }
+            }
+            return;
         }
     }
 }

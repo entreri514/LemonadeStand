@@ -31,11 +31,11 @@ namespace LemonadeStand
 
         public void DisplayInventory()
         {
-            Console.WriteLine("Inventory: \n");
-            Console.WriteLine("Lemons: " + lemons+"\n");
-            Console.WriteLine("Sugar Cubes: " + sugarCubes + "\n");
-            Console.WriteLine("Ice Cubes: " + iceCubes + "\n");
-            Console.WriteLine("Cups: " + cups+"\n");
+            Console.WriteLine("Inventory: ");
+            Console.WriteLine("Lemons: " + lemons);
+            Console.WriteLine("Sugar Cubes: " + sugarCubes);
+            Console.WriteLine("Ice Cubes: " + iceCubes);
+            Console.WriteLine("Cups: " + cups);
             return;
         }
         public void AddLemonsToInventory(int numberOfLemons)
