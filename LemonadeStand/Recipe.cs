@@ -13,7 +13,7 @@ namespace LemonadeStand
         public int numberOfSugarCubes;
         public int numberOfIceCubes;
         public double price;
-
+        
 
         // constructor (SPAWNER)
         public Recipe()
@@ -27,7 +27,7 @@ namespace LemonadeStand
         //Member Methods (CAN DO)
         public void DisplayRecipe()
         {
-            Console.WriteLine($"Your recipe currently consists of:\n{numberOfLemons} lemons per pitcher\n{numberOfSugarCubes} sugar cubes per pitcher\n{numberOfIceCubes} ice cubes per pitcher");
+            Console.WriteLine($"Your recipe currently consists of: {numberOfLemons} lemons per pitcher\n{numberOfSugarCubes} sugar cubes per pitcher\n{numberOfIceCubes} ice cubes per pitcher");
         }
         public void ChangeRecipe()
         {

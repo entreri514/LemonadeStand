@@ -23,8 +23,9 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
-        public string PlayerPurchase(string YN)
+        public string PlayerPurchase()
         {
+            string YN;
             Console.WriteLine("Would you like to buy any items today? <y/n> ");
             YN = Console.ReadLine();
             if (YN != "y") YN = "n";
@@ -38,11 +39,11 @@ namespace LemonadeStand
             string input = Console.ReadLine();
             int entry = int.Parse(input);
             Store store = new Store();
-
-       //     if (entry == 1) store.SellLemons(0);
-       //     if (entry == 2) store.SellSugarCubes(0);
-       //     if (entry == 3) store.SellIceCubes(0);
-       //     if (entry == 4) store.SellCups(0);
+            Player player = new Player();
+            if (entry == 1) store.SellLemons(player);
+            if (entry == 2) store.SellSugarCubes(player);
+            if (entry == 3) store.SellIceCubes(player);
+            if (entry == 4) store.SellCups(player);
 
                 return (YN);
         }
